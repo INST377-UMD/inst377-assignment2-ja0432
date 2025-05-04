@@ -8,21 +8,27 @@
  
 </head>
 <body>
+  <h1>Assignment 2</h1>
   <nav>
     <ul>
-      <li onclick="location.href='index.html'">Home</li>
-      <li onclick="location.href='stocks.html'">Stocks</li>
-      <li onclick="location.href='dogs.html'">Dogs</li>
+      <li onclick="location.href='HomePg.html'">Home</li>
+      <li onclick="location.href='Stock.html'">Stocks</li>
+      <li onclick="location.href='Dogs.html'">Dogs</li>
     </ul>
   </nav>
+
   <div class="main-content">
-    <h1>Welcome to the Home Page!</h1>
-    <button class="button-86" onclick="location.href='stocks.html'">Stocks</button>
-    <button class="button-86" onclick="location.href='dogs.html'">Dogs</button>
+    <h2>Welcome to the Home Page!</h2>
+
+    <div class="button-container">
+      <button class="button-86" onclick="location.href='stocks.html'">Stocks</button>
+      <button class="button-86" onclick="location.href='dogs.html'">Dogs</button>
+    </div>
+
     <div class="quote-box" id="quoteBox">Loading quote...</div>
   </div>
 
-  <div class="audio-controls">
+  <div class="audio-container">
     <h3>Audio Navigation Instructions:</h3>
     <p>Say "Hello" to get a greeting.</p>
     <p>Say "Change the color to red" (or any color) to change background.</p>
@@ -33,14 +39,12 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
   <script>
-    // Quote API
     fetch('https://zenquotes.io/api/quotes')
       .then(res => res.json())
       .then(data => {
         document.getElementById('quoteBox').innerText = data[0].q + ' — ' + data[0].a;
       });
 
-    // Voice Commands
     if (annyang) {
       let commands = {
         'hello': () => alert('Hello World'),
@@ -56,6 +60,8 @@
       annyang.start();
     }
   </script>
+</body>
+
 </body>
 </html>
 
