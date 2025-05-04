@@ -3,5 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stock</title>
+  <title>Stocks Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <h1>Stocks Page</h1>
+
+  <!-- Stock Input and Date Range -->
+  <div class="stock-input">
+    <input type="text" id="stockTicker" placeholder="Enter Stock Ticker (e.g., AAPL)">
+    <select id="dateRange">
+      <option value="30">30 Days</option>
+      <option value="60">60 Days</option>
+      <option value="90">90 Days</option>
+    </select>
+    <button class="button-86" onclick="lookupStock()">Lookup Stock</button>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-container">
+    <canvas id="stockChart"></canvas>
+  </div>
+
+  <!-- Top 5 Reddit Stocks -->
+  <div class="top-stocks">
+    <h3>Top 5 Stocks Discussed on Reddit</h3>
+    <table id="redditStocksTable">
+      <thead>
+        <tr>
+          <th>Ticket</th>
+          <th>Comment Count</th>
+          <th>Sentiment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Reddit data will be populated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Audio Navigation Instructions -->
+  <div class="audio-controls">
+    <h3>Audio Navigation Instructions:</h3>
+    <p>Say "Lookup MSFT" to show MSFT chart for 30 days.</p>
+    <button onclick="annyang.start()">Turn On Audio</button>
+    <button onclick="annyang.abort()">Turn Off Audio</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="stocks.js"></script>
+</body>
+</html>
