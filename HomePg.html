@@ -21,8 +21,8 @@
     <h2>Welcome to the Home Page!</h2>
 
     <div class="button-container">
-      <button class="button-86" onclick="location.href='stocks.html'">Stocks</button>
-      <button class="button-86" onclick="location.href='dogs.html'">Dogs</button>
+      <button class="button-86" onclick="location.href='Stock.html'">Stocks</button>
+      <button class="button-86" onclick="location.href='Dogs.html'">Dogs</button>
     </div>
 
     <div class="quote-box" id="quoteBox">Loading quote...</div>
@@ -51,9 +51,9 @@
         'change the color to *color': color => document.body.style.backgroundColor = color,
         'navigate to *page': page => {
           page = page.toLowerCase();
-          if (page.includes('stock')) location.href = 'stocks.html';
-          else if (page.includes('dog')) location.href = 'dogs.html';
-          else if (page.includes('home')) location.href = 'index.html';
+          if (page.includes('stock')) location.href = 'Stock.html';
+          else if (page.includes('dog')) location.href = 'Dogs.html';
+          else if (page.includes('home')) location.href = 'HomePg.html';
         }
       };
       annyang.addCommands(commands);
