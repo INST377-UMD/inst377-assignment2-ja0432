@@ -1,11 +1,12 @@
 body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
+  background-color: #503145c4;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
   background: #222;
   padding: 10px 0;
   display: flex;
@@ -21,87 +22,100 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
-    nav ul li {
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    nav ul li:hover {
-      color: #0ff;
-    }
-    .button-86 {
-      all: unset;
-      width: 100px;
-      height: 30px;
-      font-size: 16px;
-      background: transparent;
-      border: none;
-      position: relative;
-      color: #f0f0f0;
-      cursor: pointer;
-      z-index: 1;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
-    .button-86::after,
-    .button-86::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -99999;
-      transition: all .4s;
-    }
-    .button-86::before {
-      transform: translate(0%, 0%);
-      width: 100%;
-      height: 100%;
-      background: #28282d;
-      border-radius: 10px;
-    }
-    .button-86::after {
-      transform: translate(10px, 10px);
-      width: 35px;
-      height: 35px;
-      background: #ffffff15;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border-radius: 50px;
-    }
-    .button-86:hover::before {
-      transform: translate(5%, 20%);
-      width: 110%;
-      height: 110%;
-    }
-    .button-86:hover::after {
-      border-radius: 10px;
-      transform: translate(0, 0);
-      width: 100%;
-      height: 100%;
-    }
-    .button-86:active::after {
-      transition: 0s;
-      transform: translate(0, 5%);
-    }
-    .main-content {
-      padding: 20px;
-    }
-    .quote-box {
-      margin: 20px 0;
-      font-style: italic;
-    }
-    .audio-controls {
-      margin-top: 50px;
-      background: #222;
-      padding: 20px;
-      border-top: 2px solid #444;
-    }
-    .button-container {
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  color: #0ff;
+}
+
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.quote-box {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.audio-controls {
+  margin-top: 50px;
+  background: #222;
+  padding: 20px;
+  border-top: 2px solid #444;
+}
+
+.button-container {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -127,7 +141,7 @@ nav ul {
   max-width: 600px;
   border: 2px solid #333;
 }
-/* Stock Input Section */
+
 .stock-input {
   margin: 30px 0;
   padding: 20px;
@@ -135,16 +149,7 @@ nav ul {
   border-radius: 5px;
 }
 
-#stockTicker {
-  padding: 10px;
-  font-size: 1.2em;
-  margin-right: 15px;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background-color: #333;
-  color: #fff;
-}
-
+#stockTicker,
 #dateRange {
   padding: 10px;
   font-size: 1.2em;
@@ -157,7 +162,7 @@ nav ul {
 
 button {
   padding: 10px 20px;
-  background-color: #0f0f0f;
+  background-color: #000000;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -169,7 +174,6 @@ button:hover {
   background-color: #444;
 }
 
-/* Chart Section */
 .chart-container {
   margin: 20px auto;
   max-width: 900px;
@@ -180,7 +184,6 @@ canvas {
   height: 400px !important;
 }
 
-/* Top Reddit Stocks Table */
 .top-stocks {
   margin-top: 50px;
   background: #222;
@@ -201,7 +204,8 @@ table {
   border-radius: 10px;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #444;
   padding: 15px;
   text-align: center;
@@ -225,15 +229,6 @@ table td a:hover {
   text-decoration: underline;
 }
 
-/* Audio Controls Section */
-.audio-controls {
-  margin-top: 50px;
-  background: #222;
-  padding: 20px;
-  border-top: 2px solid #444;
-  border-radius: 10px;
-}
-
 .audio-controls h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -242,20 +237,6 @@ table td a:hover {
 .audio-controls p {
   font-size: 1.2em;
   margin: 5px 0;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #0f0f0f;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #444;
 }
 
 /* Responsive Design */
@@ -269,7 +250,9 @@ button:hover {
     margin: 10px 0;
   }
 
-  .stock-input input, .stock-input select, .stock-input button {
+  .stock-input input,
+  .stock-input select,
+  .stock-input button {
     font-size: 1em;
     width: 100%;
     margin-bottom: 10px;
@@ -283,6 +266,8 @@ button:hover {
     width: 90%;
   }
 }
+
+/* Doggos Page */
 .dog-carousel {
   max-width: 800px;
   margin: 30px auto;
