@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dogs Page</title>
   <link rel="stylesheet" href="Style1.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
 </head>
 <body>
 
@@ -36,13 +37,24 @@
       <p>Max Life: <span id="maxLife"></span> years</p>
     </section>
 
-    <section class="audio-controls">
-      <h3>Voice Commands</h3>
-      <p>Say "Load Dog Breed <Breed Name>" to display the breed information.</p>
-      <button id="turnOnAudio">Turn On Audio</button>
-      <button id="turnOffAudio">Turn Off Audio</button>
-    </section>
-  </main>
+   
+
+  <div id="dogCarousel" data-simple-slider style="width: 612px; height: 612px; margin: 0 auto;"></div>
+
+  <div class="dog-buttons" id="breedButtons"></div>
+
+  <div class="dog-info" id="breedInfo" style="display:none;">
+    <h2 id="breedName">Breed Name</h2>
+    <p id="breedDescription">Description</p>
+    <p>Min Life Expectancy: <span id="minLife"></span> years</p>
+    <p>Max Life Expectancy: <span id="maxLife"></span> years</p>
+  </div>
+
+  <div style="text-align:center; margin-top:20px;">
+    <button id="turnOnAudio">🎙️ Turn On Voice</button>
+    <button id="turnOffAudio">🔇 Turn Off Voice</button>
+  </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>

@@ -1,5 +1,5 @@
 body {
-  background-color: #503145c4;
+  background-color:  #503145c4;
   color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -29,7 +29,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  color: #0ff;
+  color: rgba(0, 255, 255, 0.464);
 }
 
 .button-86 {
@@ -267,7 +267,7 @@ table td a:hover {
   }
 }
 
-/* Doggos Page */
+/* Doggos Page Styles */
 .dog-carousel {
   max-width: 800px;
   margin: 30px auto;
