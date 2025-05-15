@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style1.css">
+ 
+</head>
+<body>
+  <h1>Assignment 2</h1>
+  <nav>
+    <ul>
+      <li onclick="location.href='HomePg.html'">Home</li>
+      <li onclick="location.href='Stock.html'">Stocks</li>
+      <li onclick="location.href='Dogs.html'">Dogs</li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <h2>Welcome to the Home Page!</h2>
+
+    <div class="button-container">
+      <button class="button-86" onclick="location.href='Stock.html'">Stocks</button>
+      <button class="button-86" onclick="location.href='Dogs.html'">Dogs</button>
+    </div>
+
+    <div class="quote-box" id="quoteBox">Loading quote...</div>
+  </div>
+
+  <div class="audio-container">
+    <h3>Audio Navigation Instructions:</h3>
+    <p>Say "Hello" to get a greeting.</p>
+   
+    <button onclick="annyang.start()">Turn On Audio</button>
+    <button onclick="annyang.abort()">Turn Off Audio</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script>
+    fetch('https://zenquotes.io/api/quotes')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('quoteBox').innerText = data[0].q + ' — ' + data[0].a;
+      });
+
+    if (annyang) {
+      let commands = {
+        'hello': () => alert('Hello World'),
+        'change the color to *color': color => document.body.style.backgroundColor = color,
+        'navigate to *page': page => {
+          page = page.toLowerCase();
+          if (page.includes('stock')) location.href = 'Stock.html';
+          else if (page.includes('dog')) location.href = 'Dogs.html';
+          else if (page.includes('home')) location.href = 'HomePg.html';
+        }
+      };
+      annyang.addCommands(commands);
+      annyang.start();
+    }
+  </script>
+</body>
+
+</body>
+</html>
+
+
+
+
+
+

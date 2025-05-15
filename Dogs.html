@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogs Page</title>
+  <link rel="stylesheet" href="Style1.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="HomePg.html">Home</a></li>
+        <li><a href="Stock.html">Stocks</a></li>
+        <li><a href="Dogs.html">Dogs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel-container">
+      <h1>Dog Images Carousel</h1>
+      <div id="dogCarousel" class="carousel"></div>
+    </section>
+
+    <section class="breed-buttons-container">
+      <h2>Dog Breeds</h2>
+      <div id="breedButtons"></div>
+    </section>
+
+    <section id="breedInfo" class="breed-info">
+      <h3 id="breedName"></h3>
+      <p id="breedDescription"></p>
+      <p>Min Life: <span id="minLife"></span> years</p>
+      <p>Max Life: <span id="maxLife"></span> years</p>
+    </section>
+
+   
+
+  <div id="dogCarousel" data-simple-slider style="width: 612px; height: 612px; margin: 0 auto;"></div>
+
+  <div class="dog-buttons" id="breedButtons"></div>
+
+  <div class="dog-info" id="breedInfo" style="display:none;">
+    <h2 id="breedName">Breed Name</h2>
+    <p id="breedDescription">Description</p>
+    <p>Min Life Expectancy: <span id="minLife"></span> years</p>
+    <p>Max Life Expectancy: <span id="maxLife"></span> years</p>
+  </div>
+
+  <div style="text-align:center; margin-top:20px;">
+    <button id="turnOnAudio">🎙️ Turn On Voice</button>
+    <button id="turnOffAudio">🔇 Turn Off Voice</button>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+
+  <script src="dogs.js"></script>
+
+</body>
+</html>
